@@ -8,3 +8,5 @@ const UserUpdateService = async (Request,DataModel) => {
     }
 
 }
+
+module.exports= UserUpdateService;

@@ -25,3 +25,5 @@ const UserVerifyOtpService =async (Request, DataModel) => {
 
     }
 }
+
+module.exports = UserVerifyOtpService;
