@@ -17,10 +17,10 @@ router.get("/RecoverVerifyOTP/:email/:otp",UsersController.RecoverVerifyOTP);
 router.post("/RecoverResetPass",UsersController.RecoverResetPass);
 
 // Brands
-router.post("/CreateBrand",AuthVerifyMiddleware,BrandsController.CreateBrand)
-router.post("/UpdateBrand/:id",AuthVerifyMiddleware,BrandsController.UpdateBrand)
-router.get("/BrandList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,BrandsController.BrandList)
-router.get("/BrandDropDown",AuthVerifyMiddleware,BrandsController.BrandDropDown)
+router.post("/CreateBrand",AuthVerifyMiddleware,BrandsController.CreateBrand);
+router.post("/UpdateBrand/:id",AuthVerifyMiddleware,BrandsController.UpdateBrand);
+router.get("/BrandList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,BrandsController.BrandList);
+router.get("/BrandDropDown",AuthVerifyMiddleware,BrandsController.BrandDropDown);
 
 
 

@@ -41,4 +41,4 @@ const ListService= async (Request,DataModel,SearchArray) => {
         return {status: "fail", data: error}
     }
 }
-module.exports=ListService
+module.exports=ListService;
