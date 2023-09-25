@@ -16,7 +16,10 @@ exports.UpdateBrand = async (req, res)=>{
 
 
 exports.BrandList = async (req, res)=>{
-    let Result = await ListService (req,DataModel)
+    let SearchRgx = {"$regex": req.params.searchKeyword, "$options": "i"}
+    let SearchArray=[{Name: SearchRgx}]
+
+    let Result = await ListService (req,DataModel,SearchArray)
     res.status(200).json(Result)
 }
 
