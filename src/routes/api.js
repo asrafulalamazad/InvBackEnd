@@ -5,6 +5,7 @@ const BrandsController = require("../controllers/Brands/BrandsController");
 const CategoriesController = require("../controllers/Categories/CategoriesController");
 const CustomersController = require("../controllers/Customers/CustomersController");
 const SuppliersController = require("../controllers/Suppliers/SuppliersController");
+const ExpenseTypesController = require("../controllers/Expenses/ExpenseTypesController");
 
 
 const router= express.Router();
@@ -42,11 +43,11 @@ router.get("/CustomersDropDown",AuthVerifyMiddleware,CustomersController.Custome
 
 
 
-// Suppliers
-router.post("/CreateSuppliers",AuthVerifyMiddleware,SuppliersController.CreateSuppliers);
-router.post("/UpdateSuppliers/:id",AuthVerifyMiddleware,SuppliersController.UpdateSuppliers);
-router.get("/SuppliersList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,SuppliersController.SuppliersList);
-router.get("/SuppliersDropDown",AuthVerifyMiddleware,SuppliersController.SuppliersDropDown);
+// ExpenseTypes
+router.post("/CreateExpenseTypes",AuthVerifyMiddleware,ExpenseTypesController.CreateExpenseTypes);
+router.post("/UpdateExpenseTypes/:id",AuthVerifyMiddleware,ExpenseTypesController.UpdateExpenseTypes);
+router.get("/ExpenseTypesList/:pageNo/:perPage/:searchKeyword",AuthVerifyMiddleware,ExpenseTypesController.ExpenseTypesList);
+router.get("/ExpenseTypesDropDown",AuthVerifyMiddleware,ExpenseTypesController.ExpenseTypesDropDown);
 
 
 
